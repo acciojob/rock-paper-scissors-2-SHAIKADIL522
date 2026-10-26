@@ -23,20 +23,27 @@ function render() {
   compEl.textContent = computerPoints;
 }
 
-function startGame() {
-  const n = parseInt(input.value, 10);
-  if (!Number.isInteger(n) || n < 1) return;
-
-  roundsLeft = n;
+function resetGame() {
+  roundsLeft = 0;
   userPoints = 0;
   computerPoints = 0;
-  playing = true;
-
+  playing = false;
   computerEl.textContent = "";
   roundEl.textContent = "";
   gameEl.textContent = "";
   render();
 }
+
+function startGame() {
+  resetGame();                         // reset FIRST, always
+  const n = parseInt(input.value, 10);
+  if (!Number.isInteger(n) || n < 1) return;
+  roundsLeft = n;
+  playing = true;
+  render();
+}
+
+resetGame();                           // initial values set by JS on load
 
 function playRound(userChoice) {
   if (!playing) return;
