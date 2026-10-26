@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <h1>Rock Paper Scissors</h1>
 
+  <input type="number" min="1" placeholder="Number of turns" data-ns-test="game-number">
+  <button data-ns-test="play-game">Play</button>
+
+  <div>
+    <button data-ns-test="rock">Rock</button>
+    <button data-ns-test="paper">Paper</button>
+    <button data-ns-test="scissors">Scissors</button>
+  </div>
+
+  <p>Computer chose: <span data-ns-test="computer-choose"></span></p>
+  <p>Round result: <span data-ns-test="round-result"></span></p>
+  <p>Rounds left: <span data-ns-test="rounds-left">0</span></p>
+  <p>User points: <span data-ns-test="user-points">0</span></p>
+  <p>Computer points: <span data-ns-test="computer-points">0</span></p>
+  <p>Game result: <span data-ns-test="game-result"></span></p>
+
+  <script type="text/javascript" src="./script.js"></script>
 </body>
-
 </html>
